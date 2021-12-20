@@ -9,6 +9,9 @@
 ## 1. Introduction
 
 We are trying to build an end-to-end Computer Vision Pipeline for detecting characteristics for a fashion apparel. 
+
+We will be using [DeepFashion2](https://github.com/switchablenorms/DeepFashion2) dataset.
+
 To complete this pipeline we will be using doing the following tasks:
 
 * Image Segmentation([U2-Net](https://github.com/xuebinqin/U-2-Net)) 
