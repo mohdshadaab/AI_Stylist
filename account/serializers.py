@@ -1,4 +1,3 @@
-from matplotlib import image
 from rest_framework import serializers
 from .models import Image, User
 
@@ -9,8 +8,9 @@ class ImageSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
-    images=ImageSerializer(many=True)
+    images=ImageSerializer(many=True, read_only=True,source='image_set')
 
     class Meta:
         model=User
-        field=['user_id', 'first_name', 'last_name', 'email', 'images']
+        fields=['user_id', 'first_name', 'last_name', 'email', 'images' ]
+        #fields='__all__'

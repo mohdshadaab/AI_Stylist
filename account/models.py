@@ -18,13 +18,17 @@ def upload_to(instance, filename):
     return 'images/{filename}'.format(filename=filename)
 
 class Image(models.Model):
-    user=models.ForeignKey(User, related_name='cloth_image', on_delete=models.CASCADE)
+    
     image=models.ImageField(upload_to=upload_to, blank=True, null=True)
     category_list=models.TextField(null=True)
-    color=models.TextField(max_length=30)
+    color=models.TextField(null=True)
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f'{self.user.first_name} {self.user.last_name}'
+        return f'{self.image}'
+
+
+
 
 
 

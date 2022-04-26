@@ -1,0 +1,10 @@
+torch
+numpy
+pandas
+pillow
+webcolors
+django
+djangorestframework
+markdown
+fastapi
+uvicorn

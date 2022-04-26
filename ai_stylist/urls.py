@@ -23,6 +23,5 @@ admin.site.index_title = "Welcome to AI Stylist Admin Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('account.urls')),
-    path('dl_layer/', include('dl_layer.urls'))
+    path('account/', include('account.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
